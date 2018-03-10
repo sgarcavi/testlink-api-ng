@@ -31,55 +31,56 @@ class API{
 
 
   //GET METHODS
-    getProjects(){
+    getProjects(pcallback){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getProjects', [{'devKey':this.settings.devKey}], this.settings.callback);
+
+        this.xmlclient.methodCall('tl.getProjects', [{'devKey':this.settings.devKey}], pcallback || this.settings.callback);
     }
 
-    getProjectByName(project){
+    getProjectByName(project,pcallback){
       // Sends a method call to the XML-RPC server
       console.log(project);
-        this.xmlclient.methodCall('tl.getTestProjectByName', [{'devKey':this.settings.devKey,'testprojectname':project}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getTestProjectByName', [{'devKey':this.settings.devKey,'testprojectname':project}], pcallback || this.settings.callback);
     }
 
     getProjectTestPlans(project){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getProjectTestPlans', [{'devKey':this.settings.devKey,'testprojectid':project}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getProjectTestPlans', [{'devKey':this.settings.devKey,'testprojectid':project}], pcallback || this.settings.callback);
     }
 
     getBuildsForTestPlan(testplanid){
       // Sends a method call to the XML-RPC server
         console.log("plan id loockings" + testplanid);
-        this.xmlclient.methodCall('tl.getBuildsForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getBuildsForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
     getTestPlanPlatforms(testsuite_id,get_tests){
       // Sends a method call to the XML-RPC server
-      this.xmlclient.methodCall('tl.getTestPlanPlatforms', [{'devKey':this.settings.devKey,'testplanid':testplanid}], this.settings.callback);
+      this.xmlclient.methodCall('tl.getTestPlanPlatforms', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
     getTestSuitesForTestPlan (testplanid){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getTestSuitesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getTestSuitesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
     getTestCasesForTestPlan(testplanid){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getTestCasesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getTestCasesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallbck || this.settings.callback);
     }
 
     getTestCaseIDByName (testcasename){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getTestCaseIDByName', [{'devKey':this.settings.devKey,'testcasename':testcasename}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getTestCaseIDByName', [{'devKey':this.settings.devKey,'testcasename':testcasename}], pcallback || this.settings.callback);
     }
 
     getTestCase(testcaseid){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getTestCase', [{'devKey':this.settings.devKey,'testcaseid':testcaseid}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getTestCase', [{'devKey':this.settings.devKey,'testcaseid':testcaseid}], pcallback || this.settings.callback);
     }
 
     getLatestBuildForTestPlan(testplanid){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getLatestBuildForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], this.settings.callback);
+        this.xmlclient.methodCall('tl.getLatestBuildForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
 
