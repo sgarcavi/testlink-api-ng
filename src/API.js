@@ -43,42 +43,42 @@ class API{
         this.xmlclient.methodCall('tl.getTestProjectByName', [{'devKey':this.settings.devKey,'testprojectname':project}], pcallback || this.settings.callback);
     }
 
-    getProjectTestPlans(project){
+    getProjectTestPlans(project,pcallback){
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getProjectTestPlans', [{'devKey':this.settings.devKey,'testprojectid':project}], pcallback || this.settings.callback);
     }
 
-    getBuildsForTestPlan(testplanid){
+    getBuildsForTestPlan(testplanid,pcallback){
       // Sends a method call to the XML-RPC server
         console.log("plan id loockings" + testplanid);
         this.xmlclient.methodCall('tl.getBuildsForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
-    getTestPlanPlatforms(testsuite_id,get_tests){
+    getTestPlanPlatforms(testsuite_id,get_tests,pcallback){
       // Sends a method call to the XML-RPC server
       this.xmlclient.methodCall('tl.getTestPlanPlatforms', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
-    getTestSuitesForTestPlan (testplanid){
+    getTestSuitesForTestPlan (testplanid,pcallback){
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getTestSuitesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
-    getTestCasesForTestPlan(testplanid){
+    getTestCasesForTestPlan(testplanid,pcallback){
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getTestCasesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallbck || this.settings.callback);
     }
 
-    getTestCaseIDByName (testcasename){
+    getTestCaseIDByName (testcasename,pcallback){
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getTestCaseIDByName', [{'devKey':this.settings.devKey,'testcasename':testcasename}], pcallback || this.settings.callback);
     }
 
-    getTestCase(testcaseid){
+    getTestCase(testcaseid,pcallback){
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getTestCase', [{'devKey':this.settings.devKey,'testcaseid':testcaseid}], pcallback || this.settings.callback);
     }
 
-    getLatestBuildForTestPlan(testplanid){
+    getLatestBuildForTestPlan(testplanid,pcallback){
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getLatestBuildForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
