@@ -1,0 +1,27 @@
+{
+  "name": "testlinkng",
+  "version": "1.0.0",
+  "description": "Testlink client that allows connection by http/https protocols.",
+  "main": "index.js",
+  "author:": "Sergio Garcia sgarcavi93@gmail.com",
+  "license":"ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgarcavi/testlink-api-ng.git"
+  },
+  "dependencies": {
+    "underscore": "*",
+    "xmlrpc": "*"
+  },
+  "keywords":[
+    "testlink",
+    "https",
+    "request",
+    "api",
+    "connect",
+    "xmlrpc"
+  ]
+}
