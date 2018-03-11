@@ -83,6 +83,11 @@ class API{
         this.xmlclient.methodCall('tl.getLatestBuildForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
+    getTestPlanByName(testplanname,testprojectname,pcallback){
+      // Sends a method call to the XML-RPC server
+        this.xmlclient.methodCall('tl.getTestPlanByName', [{'devKey':this.settings.devKey,'testprojectname':testprojectname,'testplanname':testplanname}], pcallback || this.settings.callback);
+    }
+
 
 
 }
