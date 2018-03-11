@@ -39,7 +39,6 @@ class API{
 
     getProjectByName(project,pcallback){
       // Sends a method call to the XML-RPC server
-      console.log(project);
         this.xmlclient.methodCall('tl.getTestProjectByName', [{'devKey':this.settings.devKey,'testprojectname':project}], pcallback || this.settings.callback);
     }
 
@@ -50,7 +49,6 @@ class API{
 
     getBuildsForTestPlan(testplanid,pcallback){
       // Sends a method call to the XML-RPC server
-        console.log("plan id loockings" + testplanid);
         this.xmlclient.methodCall('tl.getBuildsForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
     getTestPlanPlatforms(testsuite_id,get_tests,pcallback){
