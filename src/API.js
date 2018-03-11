@@ -65,7 +65,7 @@ class API{
 
     getTestCasesForTestPlan(testplanid,pcallback){
       // Sends a method call to the XML-RPC server
-        this.xmlclient.methodCall('tl.getTestCasesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallbck || this.settings.callback);
+        this.xmlclient.methodCall('tl.getTestCasesForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
 
     getTestCaseIDByName (testcasename,pcallback){
