@@ -89,7 +89,10 @@ class API{
       // Sends a method call to the XML-RPC server
       this.xmlclient.methodCall('tl.getTotalsForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
-
+    getLastExecutionResult(testplanid,testcaseid,pcallback){
+      // Sends a method call to the XML-RPC server
+      this.xmlclient.methodCall('tl.getLastExecutionResult', [{'devKey':this.settings.devKey,'testplanid':testplanid,"testcaseid":testcaseid}], pcallback || this.settings.callback);
+    }
 
 }
 
