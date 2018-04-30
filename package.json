@@ -4,7 +4,7 @@
   "description": "Testlink client that allows connection by http/https protocols.",
   "main": "index.js",
   "author:": "Sergio Garcia sgarcavi93@gmail.com",
-  "license":"ISC",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,7 @@
     "underscore": "*",
     "xmlrpc": "*"
   },
-  "keywords":[
+  "keywords": [
     "testlink",
     "https",
     "request",
