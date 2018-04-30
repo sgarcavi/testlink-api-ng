@@ -1,6 +1,6 @@
 {
   "name": "testlink-api-ng",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Testlink client that allows connection by http/https protocols.",
   "main": "index.js",
   "author:": "Sergio Garcia sgarcavi93@gmail.com",
