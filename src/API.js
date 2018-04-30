@@ -85,7 +85,7 @@ class API{
       // Sends a method call to the XML-RPC server
         this.xmlclient.methodCall('tl.getTestPlanByName', [{'devKey':this.settings.devKey,'testprojectname':testprojectname,'testplanname':testplanname}], pcallback || this.settings.callback);
     }
-    getTotalsForTestPlan(testplanid){
+    getTotalsForTestPlan(testplanid,pcallback){
       // Sends a method call to the XML-RPC server
       this.xmlclient.methodCall('tl.getTotalsForTestPlan', [{'devKey':this.settings.devKey,'testplanid':testplanid}], pcallback || this.settings.callback);
     }
